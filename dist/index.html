@@ -1,83 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cookie-clicker</title>
-    <!-- Fonts -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./login.css" />
+    <title>Log in & Sign up Form</title>
   </head>
-  <body id="zero" class=" h-screen  flex flex-col overflow-hidden">
-    <div class="welcome">
-      <span style="--i:10">C</span><span style="--i:11">O</span><span style="--i:12">O</span><span style="--i:13">K</span><span style="--i:14">I</span><span style="--i:15">E</span>&nbsp;&nbsp;
-      <span style="--i:16">C</span><span style="--i:17">L</span><span style="--i:18">I</span><span style="--i:19">C</span><span style="--i:20">K</span><span style="--i:21">E</span><span style="--i:22">R</span>
-    </div>
-
-    <div id="top" class="flex-[3_2_60%]  flex flex-row">
-      <div id="left" class=" flex-[1_3_20%]  flex justify-center items-center">
-        
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="#" class="sign-in-form">
+            <h2 class="title">Log in</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="username_l"  id="username" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input id="pwd_l" type="password" placeholder="Password" />
+            </div>
+            <input id="loginBtn" type="button" value="Login" class="btn solid" />
+            <p class="social-text">Or Log in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="#" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input id="username_s" type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input id="pwd_s" type="password" placeholder="Password" />
+            </div>
+            <input id="signUpBtn" type="button" class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <img src="hibye.png" class="image" alt="" />
+        </div>
       </div>
 
-      <div id="center" class=" flex-[3_1_60%] flex justify-center items-center p-2.5">
-       
-        <div id="cookie_container" class="flex justify-center items-center w-full h-full">
-          <div id = "cookie" class=" flex justify-center  rounded-full overflow-hidden w-1/2">
-            <img src="puppy.gif" class=" h-full w-full" alt="..."  >
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New to COOKIE CLICKER ?</h3>
+            <p>
+                 Welcome to <strong><i>Cookie Clicker</i></strong>. If you are new here, Sign Up to enjoy the game and to save your scores. Hope you enjoy!!! 
+            </p>
+            <button class="btn" id="sign-up-btn">
+              Sign up
+            </button>
           </div>
         </div>
-        
-      </div>
-
-      <div id="right" class="  flex-[1_3_20%] flex flex-col">
-        
-        <div id="reset_area" class=" flex  flex-[1_5_10%] items-start justify-end p-3">
-          <div id="reset" class="  text-center  bg-red-600 h-10 w-40 rounded-2xl text-black border-2 cursor-pointer hover:bg-red-400">
-            Reset
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Already a member of COOKIE CLICKER ?</h3>
+            <p>
+                Welcome back to <strong><i>Cookie Clicker</i></strong>. If you are an existing member, click the button below to Log In and save your progress. 
+            </p>
+            <button class="btn" id="sign-in-btn">
+              Log in
+            </button>
           </div>
         </div>
-        <div id="logs" class=" bg-slate-50 flex-[5_1_90%] flex flex-col justify-start items-start border-2 p-2">
-            
-        </div>
-        
-
       </div>
-
-    </div>
-    <div id="bottom" class=" flex-[2_3_40%]">
-
-      <div id="under1" class="flex justify-center items-center flex-1">
-
-        
-
-      </div>
-
-      <div id="under2" class="flex justify-center items-center flex-1 flex-col">
-        <p>Cookie count:</p>
-        <div id = "numbers"></div>
-      </div>
-
-      <div id="under3" class="flex justify-center items-center flex-1 p-3">
-        <button type="submit" id="btn1">
-          <img  id="bonus-double-img" src ="lock.png" width="150px"  alt="lock" class="lock" />
-        </button>
-        <button type="submit" id="bonus-double">
-          <img  id="bonus-double-img" src ="lock.png" width="150px"  alt="lock" class="lock" />
-        </button>
-        <button type="submit" id="bonus-triple">
-          <img id="bonus-triple-img" src="lock.png" width="150px" alt="lock" class="lock" />
-        </button>
-        
-      </div>
-
     </div>
 
-    </div>
-
-    <!-- Script -->
-    <script type="module" src="main.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="module" src="login.js"></script>
   </body>
 </html>
